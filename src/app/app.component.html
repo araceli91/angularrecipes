@@ -1,11 +1,13 @@
 <app-header></app-header>
 <div class="container">
-<div class="row">
-  <div class="col">
-    <app-recipe-list></app-recipe-list>
+  <div class="row">
+    <div class="col">
+      <app-recipe-list
+        (selectRecipe)="onSelectedRecipe($event)"
+      ></app-recipe-list>
+    </div>
+    <div class="col">
+      <app-recipe-details [recipe]="selectedRecipe"></app-recipe-details>
+    </div>
   </div>
-  <div class="col">
-    <app-shopping-list></app-shopping-list>
-  </div>
-</div>
 </div>

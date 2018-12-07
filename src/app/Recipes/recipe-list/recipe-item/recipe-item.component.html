@@ -1,8 +1,9 @@
-<div class="card" style="width: 18rem;">
-  <img class="card-img-top" [src]="recipe.imagepath" alt="Card image cap" />
-  <div class="card-body">
-    <h5 class="card-title">{{ recipe.name }}</h5>
-    <p class="card-text">{{ recipe.description }}</p>
-    <a href="#" class="btn btn-primary">Apri</a>
-  </div>
-</div>
+<li class="list-group-item" (click)="onSelectedItem()">
+  <img
+    class="card-img-top"
+    [src]="recipe.imagepath"
+    alt="Card image cap"
+    style="width:100px; height:auto;"
+  />
+  <h5 class="card-title">{{ recipe.name }}</h5>
+</li>
